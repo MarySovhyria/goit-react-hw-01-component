@@ -6,12 +6,12 @@ import {
     Label,
     Percentage
 } from './statistic.styled'
-import { getRandomHexColor } from './getRandomHexColor';
+import { getRandomHexColor } from '../utils/getRandomHexColor';
 
-const Statistic = ({stat}) => {
+const Statistic = ({stat, title}) => {
     return (
         <StatisticWrap>
-            <Heading>Statistic</Heading>
+           {title && <Heading>{title}</Heading>}
             <StatList>
                 {stat.map(stat => (
                 <StatItem
